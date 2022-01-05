@@ -1,0 +1,104 @@
+.skill-body {
+  @media screen and(min-width: em(1300)) {
+    display: grid;
+    grid-template-columns: minmax(auto, rem(416)) auto;
+    column-gap: $gap;
+
+    margin-bottom: rem(120);
+  }
+}
+.skill-content {
+  margin-bottom: rem(70);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: rem(48);
+  }
+
+  @media screen and(min-width: em(1300)) {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @media screen and(min-width: em(768)) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__text {
+    color: $lightGrey;
+
+    font-size: rem(18);
+    line-height: prc(27, 18);
+
+    @media screen and(min-width: em(1300)) {
+      padding-right: rem(48);
+    }
+  }
+}
+
+.skill-card {
+  margin-bottom: rem(64);
+  display: grid;
+  row-gap: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gap;
+    margin-bottom: rem(80);
+  }
+
+  @media screen and(min-width: em(1300)) {
+    margin-bottom: 0;
+  }
+
+  &__icon {
+    margin-bottom: rem(24);
+
+    &--svg {
+      width: 32px;
+      height: 32px;
+
+      fill: $primary;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(12);
+
+    font-weight: bold;
+    font-size: rem(24);
+    line-height: prc(36, 24);
+  }
+
+  &__text {
+    color: $lightGrey;
+  }
+}
+
+.skill-company {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $bgHeader;
+  }
+
+  &__link {
+    display: inline-flex;
+
+    padding: 60px 30px;
+
+    &:hover .skill-company__link--svg,
+    &:focus .skill-company__link--svg {
+      fill: $primary;
+    }
+    &--svg {
+      fill: $lightGrey;
+    }
+  }
+}

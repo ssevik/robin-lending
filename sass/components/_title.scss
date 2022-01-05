@@ -1,0 +1,24 @@
+.title {
+  color: $bgHeader;
+
+  font-weight: 700;
+  font-size: rem(32);
+  line-height: prc(38, 32);
+
+  &--color {
+    color: $text;
+  }
+
+  @media screen and(min-width: em(768)) {
+    font-size: rem(55);
+  }
+}
+
+.subtitle {
+  color: $lightGrey;
+
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: prc(24, 16);
+  text-transform: uppercase;
+}

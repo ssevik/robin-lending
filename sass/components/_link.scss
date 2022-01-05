@@ -1,0 +1,29 @@
+.link {
+  position: relative;
+  display: inline-block;
+
+  padding-bottom: rem(5);
+
+  color: $bgHeader;
+
+  font-size: rem(16);
+  line-height: prc(24, 16);
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: #8491a0;
+
+    @include transition(opacity);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0;
+  }
+}

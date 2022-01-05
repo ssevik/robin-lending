@@ -1,0 +1,54 @@
+body {
+  height: 100%;
+
+  color: $text;
+  background-color: $main;
+
+  font-family: 'Sen', sans-serif;
+  font-size: rem(16);
+  line-height: prc(24, 16);
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  min-width: em(360);
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and(min-width: em(768)) {
+    min-width: em(768);
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and(min-width: em(1300)) {
+    max-width: em(1300);
+
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+}
+
+.section {
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+
+  @media screen and(min-width: em(1300)) {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+  }
+}

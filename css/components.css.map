@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/components/components.scss",
+        "../sass/components/_logo.scss"
+    ],
+    "names": [],
+    "file": "components.css"
+}

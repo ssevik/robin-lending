@@ -1,0 +1,61 @@
+.header {
+  position: relative;
+}
+.header-bg {
+  display: none;
+  @media screen and(min-width: em(1300)) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000px;
+    height: 900px;
+    background-color: $bgHeader;
+    z-index: -1;
+  }
+}
+
+.header-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: rem(72);
+}
+
+.nav-header {
+  display: none;
+
+  @media screen and(min-width: em(768)) {
+    display: flex;
+    gap: rem(5);
+
+    &__link {
+      display: inline-block;
+      padding: rem(32) rem(24);
+
+      @include transition(background-color);
+
+      &:hover,
+      &:focus {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.header__btn {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @media screen and(min-width: em(768)) {
+    display: none;
+  }
+
+  &--svg {
+    width: 18px;
+    height: 11px;
+    fill: #c4c4c4;
+  }
+}

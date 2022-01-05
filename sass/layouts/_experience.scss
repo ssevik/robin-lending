@@ -1,0 +1,55 @@
+.experience__subtitle {
+  margin-bottom: rem(8);
+}
+
+.experience__title {
+  margin-bottom: rem(40);
+  max-width: rem(690);
+}
+
+.card-experience {
+  display: grid;
+  gap: $gapMin;
+
+  @media screen and(min-width: em(768)) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+  }
+
+  &__num {
+    color: $lightGrey;
+
+    font-size: rem(117);
+    line-height: prc(141, 117);
+  }
+
+  &__title {
+    margin-bottom: rem(22);
+
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: prc(36, 24);
+
+    &--green {
+      color: #3cc74e;
+    }
+
+    &--blue {
+      color: #609bff;
+    }
+
+    &--red {
+      color: #e95d90;
+    }
+  }
+
+  &__text {
+    color: $lightGrey;
+  }
+}

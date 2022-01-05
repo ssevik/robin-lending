@@ -1,0 +1,127 @@
+// .hero {
+//   display: flex;
+//   padding-top: rem(80);
+//   padding-bottom: rem(84);
+
+//   overflow: hidden;
+//   outline: 1px solid red;
+// }
+// .hero__images {
+//   flex: 0 0 100%;
+//   // position: relative;
+//   // padding-bottom: 50%;
+// }
+// .hero__images--img {
+//   // position: absolute;
+//   // width: 100%;
+//   // height: 100%;
+//   // left: 0;
+//   // top: 0;
+//   // object-fit: cover;
+// }
+// .hero__content {
+//   display: flex;
+//   align-items: center;
+//   flex: 0 0 50%;
+//   transform: translate(-100%, 0);
+// }
+// .container {
+// }
+// .hero-body {
+//   width: 50%;
+// }
+// .hero-body__title {
+// }
+// .hero-body__subtitle {
+// }
+// .hero-body__text {
+// }
+
+.hero {
+  padding-bottom: 48px;
+
+  border-bottom: 2px dashed rgba($text, 0.5);
+  overflow: hidden;
+
+  @media screen and(min-width: em(768)) {
+    padding-top: rem(80);
+    padding-bottom: rem(84);
+  }
+}
+
+.hero-body {
+  @media screen and(min-width: em(768)) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.hero__foto {
+  margin: 0 calc(-50vw + 50%);
+  margin-bottom: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    position: relative;
+    left: 45px;
+    flex-grow: 1;
+    margin-left: calc(-50vw + 41%);
+    margin-bottom: 0;
+    width: rem(400);
+    height: rem(650);
+    z-index: -1;
+  }
+
+  @media screen and(min-width: em(1300)) {
+    width: 750px;
+    height: 650px;
+  }
+}
+
+.hero__foto--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  @media screen and(min-width: em(768)) {
+    flex-grow: 2;
+    flex-basis: rem(408);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: prc(38, 32);
+
+    @media screen and(min-width: em(768)) {
+      font-size: rem(56);
+    }
+
+    @media screen and(min-width: em(1300)) {
+      font-size: rem(78);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(16);
+
+    color: rgba($text, 0.5);
+    font-weight: 700;
+    font-size: rem(32);
+    line-height: prc(38, 32);
+
+    @media screen and(min-width: em(768)) {
+      font-size: rem(56);
+    }
+
+    @media screen and(min-width: em(1300)) {
+      font-size: rem(78);
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: prc(27, 18);
+  }
+}
