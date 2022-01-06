@@ -1,0 +1,76 @@
+.about-body {
+  @media screen and(min-width: em(768)) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(24);
+  }
+}
+
+.about-content {
+  margin-bottom: rem(64);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @media screen and(min-width: em(1300)) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(40);
+
+    color: $lightGrey;
+    font-size: rem(18);
+    line-height: prc(27, 18);
+  }
+}
+
+.about-card {
+  display: grid;
+  gap: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    row-gap: rem(64);
+  }
+
+  @media screen and(min-width: em(1300)) {
+    row-gap: rem(120);
+  }
+
+  &__content {
+    padding: rem(32);
+    border: 1px solid $accentText;
+
+    @media screen and(min-width: em(1300)) {
+      padding: rem(64);
+    }
+  }
+
+  &__text {
+    margin-bottom: rem(64);
+
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: prc(36, 24);
+  }
+
+  &__name {
+    margin-bottom: rem(4);
+
+    color: $lightGrey;
+
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: prc(27, 18);
+  }
+
+  &__company {
+    @extend .about-card__name;
+    margin-bottom: 0;
+  }
+}

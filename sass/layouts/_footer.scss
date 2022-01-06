@@ -1,0 +1,70 @@
+.footer {
+  background-color: $bgHeader;
+}
+
+.footer-body {
+  @media screen and(min-width: em(768)) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $gap;
+    row-gap: rem(46);
+  }
+}
+
+.footer-content {
+  margin-bottom: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: 0;
+    margin-right: rem(215);
+  }
+
+  @media screen and(min-width: em(1300)) {
+    margin-right: rem(600);
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+
+  margin-bottom: rem(32);
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  column-gap: rem(16);
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+
+  margin-bottom: rem(24);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+
+  margin-bottom: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-copy {
+  color: $lightGrey;
+}

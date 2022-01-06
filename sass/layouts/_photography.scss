@@ -1,0 +1,67 @@
+.photography-content {
+  margin-bottom: rem(40);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: rem(64);
+  }
+
+  &__title {
+    margin-bottom: rem(24);
+  }
+
+  &__text {
+    color: $lightGrey;
+
+    font-size: rem(18);
+    line-height: prc(27, 18);
+  }
+}
+
+.photography-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  margin-bottom: rem(40);
+
+  @media screen and(min-width: em(768)) {
+    flex-wrap: nowrap;
+  }
+
+  &__link {
+    padding: rem(12) rem(16);
+
+    min-width: rem(148);
+    min-height: rem(51);
+
+    border: 1px solid $primary;
+    background-color: transparent;
+    color: $text;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: prc(27, 18);
+
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $primary;
+    }
+
+    @media screen and(min-width: em(768)) {
+      min-width: rem(88);
+    }
+  }
+}
+
+.photography-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  @media screen and(min-width: em(1300)) {
+    flex-wrap: nowrap;
+  }
+}

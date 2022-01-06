@@ -1,0 +1,88 @@
+.started__container {
+  @media screen and(min-width: em(1300)) {
+    max-width: rem(1076);
+  }
+}
+
+.started-body {
+  @media screen and(min-width: em(768)) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap;
+  }
+}
+.started-content {
+  margin-bottom: rem(48);
+
+  @media screen and(min-width: em(768)) {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @media screen and(min-width: em(768)) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__text {
+    color: $lightGrey;
+
+    font-size: rem(18);
+    line-height: prc(27, 18);
+  }
+}
+
+.started-form {
+  display: flex;
+  flex-direction: column;
+  gap: $gapMin;
+
+  &__name {
+    display: block;
+    margin-bottom: rem(8);
+  }
+
+  &__input {
+    padding: rem(10);
+    width: 100%;
+    min-height: rem(50);
+    border: none;
+
+    color: $text;
+    background-color: $bgHeader;
+    outline: none;
+  }
+
+  &__textarea {
+    @extend .started-form__input;
+    min-height: rem(100);
+
+    resize: none;
+  }
+
+  &__btn {
+    padding: rem(10);
+
+    min-height: rem(75);
+
+    color: $text;
+    background-color: $primary;
+
+    border: 1px solid transparent;
+
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: prc(27, 18);
+    text-transform: uppercase;
+
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: $primary;
+    }
+  }
+}
